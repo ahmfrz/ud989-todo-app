@@ -19,6 +19,7 @@ var app = app || {};
 		events: {
 			'click .toggle': 'toggleCompleted',
 			'dblclick label': 'edit',
+			'click .edit-btn': 'edit',
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
@@ -72,6 +73,7 @@ var app = app || {};
 
 		// Switch this view into `"editing"` mode, displaying the input field.
 		edit: function () {
+			console.log("HERE");
 			this.$el.addClass('editing');
 			this.$input.focus();
 		},
